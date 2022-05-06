@@ -40,7 +40,6 @@ I had trouble with writing tests for this program, as I haven't had much experie
 
 Edge cases and future features I would like to implement include:
 - Accounting for user trying to paint a pixel when they haven't created a canvas
-- Printing the canvas after it has been defined
 
 
 Commands
@@ -56,5 +55,7 @@ I M N - Creates a new canvas with the dimensions M x N (Height x Width)
 00000  
 00000  
 
-X - exits the program
+S - Shows the contents of the current canvas
+
+X - Terminate the session
 
