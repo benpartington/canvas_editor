@@ -28,6 +28,21 @@ As a user
 So that I can change the canvas  
 I want to be able to input coordinates and a colour
 ```
+
+Design
+------
+My design for this program was to first start with returning a small array of 'white pixels' (O). To do
+this I've created a single method, but I would like to extract the various commands into methods and instead use a 'CanvasEditor' class, to better follow SRP (single responsibility principle). In this way I could have user inputs triggering the appropriate method to run, for example, if the user enters L as the first element of their input, the program would run a method called 'paint_pixel' which would fulfill user story 3 (above).  
+
+I've attempted to use array indexing to access the relevant user inputs
+
+I had trouble with writing tests for this program, as I haven't had much experience with testing for command line user input.
+
+Edge cases and future features I would like to implement include:
+- Accounting for user trying to paint a pixel when they haven't created a canvas
+- Printing the canvas after it has been defined
+
+
 Commands
 --------
 

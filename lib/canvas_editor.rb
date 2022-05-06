@@ -18,9 +18,8 @@ def canvas_editor
         y_cordinate = input_arr[2]
         colour = input_arr[3]
 
-        grid_array[x_cordinate][y_cordinate] = colour
-
-
+        # change selected element to colour
+        # grid_array[x_cordinate][y_cordinate] = colour
 
       elsif input == "X" 
         exit = true
