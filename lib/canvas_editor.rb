@@ -2,16 +2,26 @@ def canvas_editor
   exit = false
   until exit == true do
       input = gets.chomp
-      new_arr = input.split
+      input_arr = input.split
+      grid = []
 
-      if new_arr[0] == "I"
-        width = new_arr[1].to_i
-        height = new_arr[2].to_i
+      if input_arr[0] == "I"
+        width = input_arr[1].to_i
+        height = input_arr[2].to_i
 
-        a_row = "O" * width + "\n"
-        puts a_row * height
+        row = "O" * width + "\n"
+        grid = row * height
+        puts grid #this should actually be the 'S' command, not part of this function
 
-        
+      elsif (input_arr[0] == "L")
+        x_cordinate = input_arr[1]
+        y_cordinate = input_arr[2]
+        colour = input_arr[3]
+
+        grid_array[x_cordinate][y_cordinate] = colour
+
+
+
       elsif input == "X" 
         exit = true
       end
