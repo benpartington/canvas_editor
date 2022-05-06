@@ -2,10 +2,11 @@ def canvas_editor
   exit = false
   until exit == true do
       input = gets.chomp
+      new_arr = input.split
 
-      if input[0] == "I"
-        width = input[2].to_i
-        height = input[4].to_i
+      if new_arr[0] == "I"
+        width = new_arr[1].to_i
+        height = new_arr[2].to_i
 
         a_row = "O" * width + "\n"
         puts a_row * height
