@@ -38,7 +38,11 @@ I've attempted to use array indexing to access the relevant user inputs
 
 I had trouble with writing tests for this program, as I haven't had much experience with testing for command line user input.
 
-Edge cases and future features I would like to implement include:
+Future Features
+---------------
+- I really wanted to implement a feature to fulfill user story 3 (above), but I had trouble determining the relationship between the coordinates entered by the user, and how they translated to the index of the array that needed to be changed
+
+Edge cases I would investigate next include:
 - Accounting for user trying to paint a pixel when they haven't created a canvas
 
 
