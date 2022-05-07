@@ -38,13 +38,13 @@ Design
 My design for this program was to first start with returning a small array of 'white pixels' (O). To do
 this I created a single large method, but I then extracted the various commands into multiple smaller methods and instead use a 'CanvasEditor' class, to better follow SRP (single responsibility principle). In this way I have the user inputs triggering the appropriate method to run.
 
-I've attempted to use array indexing to access the relevant user inputs.
+I've used array indexing to access the relevant user inputs.
 
 I had trouble with writing tests for this program, as I haven't had much experience with testing for command line user input. Because of time constraints I decided to focus on implementation over testing, to exhibit my skills in this area. Given more time I would have spent a while researching and learning how to write tests for user inputs, and then implemented one small feature at a time.
 
 Future Features
 ---------------
-- I really wanted to implement a feature to fulfill user story 3 (above), but I had trouble figuring out how to isolate a single cell, rather than a whole column. My 'L' command does paint the canvas, but because of the way I am creating the rows, it adds the colour to every row rather than just the specified one.
+- I really wanted to implement a feature to fulfill user story 3 (above), but I had trouble figuring out how to isolate a single cell, rather than a whole column. My 'L' command does paint the canvas but it adds the colour to every row rather than just the specified one.
 
 Edge cases I would investigate next include:
 - User trying to paint a pixel when they haven't created a canvas
@@ -58,14 +58,23 @@ Commands
 
 I M N - Creates a new canvas with the dimensions M x N (Height x Width)  
 
-"I 5 4" would create the canvas shown below     
-
-S - Shows the contents of the current canvas
+- "I 5 4" would create the canvas shown below (but S must be used to display it):
 
 00000  
 00000  
 00000  
 00000
+
+S - Shows the contents of the current canvas
+
+L X Y C - Colours the pixels (X, Y) with colour C
+
+- "L 3 4 X" would change the canvas to look like below:
+
+00000  
+00000  
+00000  
+00X00
 
 X - Terminate the session
 
